@@ -54,7 +54,7 @@ def main():
                 except requests.exceptions.RequestException as e:
                     print('Check course failed. Exception {e}')
                     time.sleep(ERROR_INTEVAL*60)
-        next_check_time = time.strftime('%H:%M:%S', time.localtime() + CHECK_INTEVAL*60)
+        next_check_time = time.strftime('%H:%M:%S', time.localtime(time.time()+ CHECK_INTEVAL*60))
         print(f'No openings, checking again at {next_check_time}')
         time.sleep(CHECK_INTEVAL*60)
 
