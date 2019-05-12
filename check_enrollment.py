@@ -17,7 +17,7 @@ def check_enrollment(course):
     for session in sessions:
         enrollment = [e.string for e in session if e.string != '\n'][5].split('/')
         time_now = time.strftime('%H:%M:%S')
-        print(f'{time_now} {course} enrolled:{enrollment[0]}, capacity:{enrollment[0]}')
+        print(f'{time_now} {course} enrolled:{enrollment[0]}, capacity:{enrollment[1]}')
         if enrollment[0] < enrollment [1]:
             return True
 
